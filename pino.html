@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Builderz - Construction Company Website Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MaderColor</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Construction Company Website Template" name="keywords">
         <meta content="Construction Company Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+        <link href="img/favicon-96x96.png" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -25,6 +26,31 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <!-- contacto-->
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+     <script type="text/javascript">
+          (function() {
+              // https://dashboard.emailjs.com/admin/account
+              emailjs.init({
+                publicKey: "wi-c-Z5ZJI_MvN3N5",
+              });
+          })();
+      </script>
+      <script type="text/javascript">
+          window.onload = function() {
+              document.getElementById('contact-form').addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  // these IDs from the previous steps
+                  emailjs.sendForm('service_8jttbqm', 'template_vl7qwo8', this)
+                      .then(() => {
+                          alert('MENSAJE ENVIADO!');
+                          document.getElementById('contact-form').reset();
+                      }, (error) => {
+                          console.log('FAILED...', error);
+                      });
+              });
+          }
+      </script>
     </head>
 
     <body>
@@ -35,10 +61,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4 col-md-12">
                             <div class="logo">
-                                <a href="index.html">
-                                    <h1>Builderz</h1>
-                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
-                                </a>
+                               <a class="navbar-brand page-scroll d-flex align-items-center" href="#"><h2 style="color: rgb(120, 95, 15);text-shadow: 1px 2px 2px #4E434C;"><strong>Mader</strong></span><span style="color: rgb(29, 188, 26);text-shadow: 1px 2px 2px #4E434C;margin-bottom: 50px;">Color </h2></a>
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-7 d-none d-lg-block">
@@ -49,30 +72,30 @@
                                             <i class="flaticon-calendar"></i>
                                         </div>
                                         <div class="top-bar-text">
-                                            <h3>Opening Hour</h3>
-                                            <p>Mon - Fri, 8:00 - 9:00</p>
+                                            <h3>Horarios</h3>
+                                            <p>Lun - Sáb, 09.00 - 20:00</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-3">
                                     <div class="top-bar-item">
                                         <div class="top-bar-icon">
                                             <i class="flaticon-call"></i>
                                         </div>
                                         <div class="top-bar-text">
-                                            <h3>Call Us</h3>
-                                            <p>+012 345 6789</p>
+                                            <h3>Llamanos</h3>
+                                            <p>3624216834</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-5">
                                     <div class="top-bar-item">
                                         <div class="top-bar-icon">
                                             <i class="flaticon-send-mail"></i>
                                         </div>
                                         <div class="top-bar-text">
-                                            <h3>Email Us</h3>
-                                            <p>info@example.com</p>
+                                            <h3>Email</h3>
+                                            <p>madercolorchaco@gmail.com</p>
                                         </div>
                                     </div>
                                 </div>
@@ -94,29 +117,26 @@
 
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto">
-                                <a href="index.html" class="nav-item nav-link">Home</a>
-                                <a href="about.html" class="nav-item nav-link">About</a>
-                                <a href="service.html" class="nav-item nav-link">Service</a>
-                                <a href="team.html" class="nav-item nav-link">Team</a>
-                                <a href="portfolio.html" class="nav-item nav-link">Project</a>
+                                <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                                <a href="about.html" class="nav-item nav-link">Nosotros</a>
+                                <a href="service.html" class="nav-item nav-link">Servicios</a>
                                 <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Categorías</a>
                                     <div class="dropdown-menu">
-                                        <a href="blog.html" class="dropdown-item">Blog Page</a>
-                                        <a href="single.html" class="dropdown-item">Single Page</a>
+                                        <a href="./algarrobo.html" class="dropdown-item">Muebles de Algarrobo</a>
+                                        <a href="./pino.html" class="dropdown-item">Muebles de Pino</a>
+                                        <a href="./mdf.html" class="dropdown-item">Muebles de MDF</a>
+                                        <a href="./electro.html" class="dropdown-item">Línea Hogar</a>
                                     </div>
                                 </div>
-                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                                <a href="contact.html" class="nav-item nav-link">Contacto</a>
                             </div>
-                            <div class="ml-auto">
-                                <a class="btn" href="https://htmlcodex.com/construction-company-html-template">Download Pro Version</a>
-                            </div>
+                            
                         </div>
                     </nav>
                 </div>
             </div>
             <!-- Nav Bar End -->
-
 
             <!-- Page Header Start -->
             <div class="page-header">
