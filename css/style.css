@@ -663,7 +663,7 @@ a:focus {
 .fact .fact-icon {
     position: relative;
     margin: 7px 10px 0 10px;
-    width: 50px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -677,8 +677,8 @@ a:focus {
 
 .fact .fact-left,
 .fact .fact-right {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .fact .fact-text h2 {
