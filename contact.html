@@ -117,9 +117,9 @@
 
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto">
-                                <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                                <a href="about.html" class="nav-item nav-link">Nosotros</a>
-                                <a href="service.html" class="nav-item nav-link">Servicios</a>
+                                <a href="index.html" class="nav-item nav-link">Inicio</a>
+                                <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
+                                <a href="service.html" class="nav-item nav-link">Ofertas</a>
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Categorías</a>
                                     <div class="dropdown-menu">
@@ -129,7 +129,7 @@
                                         <a href="./electro.html" class="dropdown-item">Línea Hogar</a>
                                     </div>
                                 </div>
-                                <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                                <a href="contact.html" class="nav-item nav-link active">Contacto</a>
                             </div>
                             
                         </div>
@@ -143,11 +143,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2>Contact Us</h2>
+                            <h2>Contacto</h2>
                         </div>
                         <div class="col-12">
-                            <a href="">Home</a>
-                            <a href="">Contact Us</a>
+                            <a href="./index.html">Inicio</a>
+                            <a href="#">Contacto</a>
                         </div>
                     </div>
                 </div>
@@ -159,8 +159,8 @@
             <div class="contact wow fadeInUp">
                 <div class="container">
                     <div class="section-header text-center">
-                        <p>Get In Touch</p>
-                        <h2>For Any Query</h2>
+                        <p>Por cualquier consulta</p>
+                        <h2>CONTACTATE CON NOSOTROS</h2>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
@@ -168,22 +168,22 @@
                                 <div class="contact-item">
                                     <i class="flaticon-address"></i>
                                     <div class="contact-text">
-                                        <h2>Location</h2>
-                                        <p>123 Street, New York, USA</p>
+                                        <h2>Ubicación</h2>
+                                        <p>Fontana - Chaco</p>
                                     </div>
                                 </div>
                                 <div class="contact-item">
                                     <i class="flaticon-call"></i>
                                     <div class="contact-text">
-                                        <h2>Phone</h2>
-                                        <p>+012 345 67890</p>
+                                        <h2>Teléfono</h2>
+                                        <p>3624216834</p>
                                     </div>
                                 </div>
                                 <div class="contact-item">
                                     <i class="flaticon-send-mail"></i>
                                     <div class="contact-text">
                                         <h2>Email</h2>
-                                        <p>info@example.com</p>
+                                        <p>madercolorchaco@gmail.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -191,22 +191,22 @@
                         <div class="col-md-6">
                             <div class="contact-form">
                                 <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                <form name="sentMessage" id="contact-form" novalidate="novalidate">
                                     <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Tu Nombre *" required="required" data-validation-required-message="Please enter your name" />
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Tu Email *" required="required" data-validation-required-message="Please enter your email" />
                                         <p class="help-block text-danger"></p>
                                     </div>
                                    
                                     <div class="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                        <textarea class="form-control" id="message" placeholder="Tu Mensaje *" name="message" required="required" data-validation-required-message="Please enter your message"></textarea>
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     <div>
-                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+                                        <button class="btn" type="submit" id="sendMessageButton">Enviar Mensaje</button>
                                     </div>
                                 </form>
                             </div>
@@ -253,7 +253,7 @@
                                 <h2>Secciones</h2>
                                 <a href="./nosotros.html">Nosotros</a>
                                 <a href="./contact.html">Contacto</a>
-                                <a href="./service.html">Servicios</a>
+                                <a href="./service.html">Ofertas</a>
                                
                             </div>
                         </div>
@@ -317,6 +317,30 @@
             <a href="#" class="back-to-top"><i class="fab fa-whatsapp"></i></a>
         </div>
         <!-- JavaScript Libraries -->
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+     <script type="text/javascript">
+          (function() {
+              // https://dashboard.emailjs.com/admin/account
+              emailjs.init({
+                publicKey: "wi-c-Z5ZJI_MvN3N5",
+              });
+          })();
+      </script>
+      <script type="text/javascript">
+          window.onload = function() {
+              document.getElementById('contact-form').addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  // these IDs from the previous steps
+                  emailjs.sendForm('service_8jttbqm', 'template_vl7qwo8', this)
+                      .then(() => {
+                          alert('MENSAJE ENVIADO!');
+                          document.getElementById('contact-form').reset();
+                      }, (error) => {
+                          console.log('FAILED...', error);
+                      });
+              });
+          }
+      </script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
         <script src="lib/easing/easing.min.js"></script>
