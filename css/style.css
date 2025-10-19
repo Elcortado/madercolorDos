@@ -2,7 +2,11 @@
 /********* General CSS *********/
 /*******************************/
 
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
 
@@ -598,9 +602,12 @@ a:focus {
 /*******************************/
 /********** About CSS **********/
 /*******************************/
+
+
 .about {
     position: relative;
     width: 100%;
+   
 }
 
 .about .section-header {
