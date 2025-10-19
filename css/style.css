@@ -2,7 +2,7 @@
 /********* General CSS *********/
 /*******************************/
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -2512,3 +2512,46 @@ img{max-width:100%;height:auto;display:block}
 }
 
 /* End of file */
+/* Mejora responsive del carrusel */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel .carousel-item {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* ocupa alto completo en desktop */
+  max-height: 800px; /* limita el alto en pantallas grandes */
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* mantiene proporción y llena el contenedor */
+  object-position: center; /* centra la imagen */
+  display: block;
+}
+
+/* Ajustes responsive */
+@media (max-width: 1024px) {
+  .carousel .carousel-item {
+    height: 70vh; /* reduce altura en tablets */
+    max-height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel .carousel-item {
+    height: 60vh; /* móviles grandes */
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel .carousel-item {
+    height: 50vh; /* móviles pequeños */
+    max-height: 400px;
+  }
+}
