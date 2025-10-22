@@ -2,15 +2,8 @@
 /********* General CSS *********/
 /*******************************/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
 body {
+    
     color: #666666;
     background: #dddddd;
     font-family: 'Poppins', sans-serif;
