@@ -2344,11 +2344,11 @@ h1,h2,h3,h4,h5,h6{margin:0 0 .5em 0}
 
 /* Layout wrapper: fluid with comfortable side padding on small screens */
 .wrapper{
-     position: relative;
+   position: relative;
     width: 100%;
     max-width: 100%; /* Cambiar de 1366px a 100% */
     margin: 0 auto;
-    background: #ffffff;ps content away from edges on small screens */
+    background: #ffffff;/* keeps content away from edges on small screens */
 }
 
 /* Make images truly responsive */
